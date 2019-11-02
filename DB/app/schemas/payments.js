@@ -1,4 +1,9 @@
 exports.paymentSchema = {
+  id: {
+    exists: {
+      errorMessage: "Payment's id attribute is missing"
+    }
+  },
   clientId: {
     exists: {
       errorMessage: "Payment's client id attribute is missing"
