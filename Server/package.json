@@ -1,0 +1,23 @@
+{
+  "name": "increase-server",
+  "version": "1.0.0",
+  "description": "Here we will receive the requests of our clients",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "NODE_ENV=testing jest test/app --runInBand --forceExit",
+    "start": "nodemon --inspect server.js"
+  },
+  "author": "aleacevedo",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-wolox-logger": "^1.1.0",
+    "logger": "0.0.1",
+    "nodemon": "^1.19.4"
+  }
+}
