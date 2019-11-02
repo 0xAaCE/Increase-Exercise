@@ -16,7 +16,7 @@ exports.config = {
       port: process.env.DB_PORT,
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
-      name: process.env.DB_NAME
+      name: ENVIRONMENT === 'testing' ? process.env.DB_NAME_TEST : process.env.DB_NAME
     }
   }
 };
