@@ -1,4 +1,4 @@
-exports.checkCreatePayment = {
+exports.paymentSchema = {
   clientId: {
     exists: {
       errorMessage: "Payment's client id attribute is missing"

@@ -1,4 +1,4 @@
-exports.checkCreateTransaction = {
+exports.transactionSchema = {
   clientId: {
     exists: {
       errorMessage: "Transaction's client id attribute is missing"
