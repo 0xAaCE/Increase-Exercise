@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "NODE_ENV=testing jest test/app --runInBand --forceExit",
+    "test": "NODE_ENV=testing jest test/app --runInBand --forceExit --detectOpenHandles",
     "migrations": "sequelize db:migrate",
     "migrations-test": "NODE_ENV=testing sequelize db:migrate",
     "start": "nodemon --inspect server.js"
