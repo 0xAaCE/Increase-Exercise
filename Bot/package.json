@@ -1,0 +1,16 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "The bot will request the info to the Increase API and save into de DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aleacevedo",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.2.0",
+    "logger": "0.0.1"
+  }
+}
