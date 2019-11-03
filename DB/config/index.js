@@ -5,6 +5,8 @@ if (ENVIRONMENT !== 'production') {
 }
 
 exports.config = {
+  environment: ENVIRONMENT,
+  isDevelopment: ENVIRONMENT === 'development',
   common: {
     api: {
       bodySizeLimit: process.env.API_BODY_SIZE_LIMIT,

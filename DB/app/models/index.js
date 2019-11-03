@@ -2,7 +2,7 @@ const fs = require('fs'),
   path = require('path'),
   Sequelize = require('sequelize'),
   basename = path.basename(__filename),
-  config = require('../../config'),
+  { config } = require('../../config'),
   dbConfig = require('../../config/db')[config.environment],
   db = {};
 
