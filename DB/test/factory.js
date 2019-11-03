@@ -1,15 +1,15 @@
-const factory = require('factory-girl').factory;
+const { factory } = require('factory-girl');
 const chance = require('chance')();
 
-const { paymetns: Payment, transactions: Transaction } = require('../app/models');
+const { payments: Payment, transactions: Transaction } = require('../app/models');
 
 factory.define('payment', Payment, {
-  id: factory.sequence('Payment.id', n => `${chance.string({ length: 31 })}${n}`),
-  clientId: factory.chance('string', { length: 32 }),
+  id: factory.sequence('Payment.id', n => `${chance.string({ length: 31, pool: 'qwertyuioasdfghjk' })}${n}`),
+  clientId: factory.chance('string', { length: 32, pool: 'qwertyuioasdfghjk' }),
   currency: 'ARS',
-  totalAmount: factory.chance('integer', { min: 0 }),
-  totalDicount: factory.chance('integer', { min: 0 }),
-  amountDiscounted: factory.chance('integer', { min: 0 }),
+  totalAmount: factory.chance('integer', { min: 0, max: 10000 }),
+  totalDiscount: factory.chance('integer', { min: 0, max: 10000 }),
+  amountDiscounted: factory.chance('integer', { min: 0, max: 10000 }),
   paymentDate: factory.chance('date')
 });
 
