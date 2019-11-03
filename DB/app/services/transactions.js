@@ -1,4 +1,4 @@
-const { transacions: Transaction } = require('../models');
+const { transactions: Transaction } = require('../models');
 const { databaseError } = require('../errors');
 
 exports.createTransaction = newTransaction => {
