@@ -39,7 +39,7 @@ exports.paymentSchema = {
     }
   },
   paymentDate: {
-    exist: {
+    exists: {
       errorMessage: "Payment's payment date attribute is missing"
     },
     isISO8601: {
