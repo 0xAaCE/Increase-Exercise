@@ -14,8 +14,8 @@ factory.define('payment', Payment, {
 });
 
 factory.define('transaction', Transaction, {
-  id: factory.sequence('Payment.id', n => `${chance.string({ length: 31 })}${n}`),
-  clientId: factory.chance('string', { length: 32 }),
-  amount: factory.chance('integer', { min: 0 }),
+  id: factory.sequence('Payment.id', n => `${chance.string({ length: 31, pool: 'qwertyuioasdfghjk' })}${n}`),
+  clientId: factory.chance('string', { length: 32, pool: 'qwertyuioasdfghjk' }),
+  amount: factory.chance('integer', { min: 0, max: 10000 }),
   approved: factory.chance('bool')
 });
