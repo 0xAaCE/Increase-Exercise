@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
   const Payment = sequelize.define(
     'payments',
     {
-      client_id: {
+      clientId: {
         type: DataTypes.STRING,
         allowNull: false,
         field: 'client_id'
@@ -42,5 +42,5 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  return User;
+  return Payment;
 };
