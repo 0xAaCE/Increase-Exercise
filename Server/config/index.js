@@ -11,9 +11,9 @@ exports.config = {
       parameterLimit: process.env.API_PARAMETER_LIMIT,
       port: process.env.PORT
     },
-    usersApi: {
-      url: process.env.USERS_API_URL,
-      token: process.env.USERS_API_TOKEN
+    increaseApi: {
+      url: process.env.INCREASE_URL,
+      token: process.env.INCREASE_TOKEN
     }
   }
 };
