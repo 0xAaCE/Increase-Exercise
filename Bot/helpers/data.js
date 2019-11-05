@@ -11,7 +11,7 @@ const generateTransaction = (rawTransaction, footer) => ({
   id: rawTransaction.slice(id.pos, id.pos + id.len),
   clientId: footer.clientId,
   amount: rawTransaction.slice(transaction.amountPos, transaction.amountPos + amount.len),
-  approved: rawTransaction.slice(transaction.approvedPos)
+  approved: rawTransaction.slice(transaction.approvedPos) === '1'
 });
 
 const generatePayment = (rawPayment, footer) => ({
