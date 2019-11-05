@@ -13,8 +13,7 @@ exports.config = {
       token: process.env.INCREASE_TOKEN
     },
     databaseApi: {
-      host: process.env.DB_HOST || 'localhost',
-      port: process.env.DB_PORT || '8081'
+      url: process.env.DB_URL || 'http://localhost:8081'
     },
     id: {
       pos: Number(process.env.ID_POS),
