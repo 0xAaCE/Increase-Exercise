@@ -11,6 +11,9 @@ exports.config = {
       parameterLimit: process.env.API_PARAMETER_LIMIT,
       port: process.env.PORT
     },
+    databaseApi: {
+      url: process.env.DB_URL || 'http://localhost:8081'
+    },
     increaseApi: {
       url: process.env.INCREASE_URL,
       token: process.env.INCREASE_TOKEN
