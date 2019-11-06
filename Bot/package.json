@@ -4,7 +4,8 @@
   "description": "The bot will request the info to the Increase API and save into de DB",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon --inspect index.js",
+    "migrations": "echo 'Migrated'",
     "test": "NODE_ENV=testing jest test/app --runInBand --forceExit --detectOpenHandles"
   },
   "author": "aleacevedo",

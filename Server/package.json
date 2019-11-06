@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "NODE_ENV=testing jest test/app --runInBand --detectOpenHandles --forceExit",
-    "start": "nodemon --inspect server.js"
+    "migrations": "echo 'Migrated' ",
+    "start": "node server.js"
   },
   "author": "aleacevedo",
   "license": "MIT",

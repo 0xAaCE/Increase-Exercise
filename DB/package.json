@@ -10,7 +10,7 @@
     "test": "NODE_ENV=testing jest test/app --runInBand --forceExit --detectOpenHandles",
     "migrations": "sequelize db:migrate",
     "migrations-test": "NODE_ENV=testing sequelize db:migrate",
-    "start": "nodemon --inspect server.js"
+    "start": "node server.js"
   },
   "author": "aleacevedo",
   "license": "MIT",
