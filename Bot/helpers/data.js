@@ -1,12 +1,15 @@
 const moment = require('moment');
 
-const { id, date, amount, transaction, payment } = require('../config').config.common;
+const { id, date, amount, transaction, payment } = require('../constants/rawprops');
 const { logger } = require('../logger');
+
+console.log(date.format);
 
 const generateFotter = rawFooter => ({
   clientId: rawFooter.slice(id.clientPos, id.clientPos + id.len),
   paymentDate: moment(rawFooter.slice(date.pos, date.pos + date.len), date.format)
 });
+
 const generateTransaction = (rawTransaction, footer) => ({
   id: rawTransaction.slice(id.pos, id.pos + id.len),
   clientId: footer.clientId,
