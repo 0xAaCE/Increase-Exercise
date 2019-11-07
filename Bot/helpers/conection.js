@@ -17,7 +17,7 @@ exports.obtainRawData = () => {
 exports.sendTransactions = transactions => {
   logger.info('Attempt to send transactions');
   return asyncForEach(transactions, async transaction => {
-    await waitFor(50);
+    await waitFor(5);
     return post(`${db.url}/transactions`, transaction).catch(error => {
       logger.error(error.message);
     });
