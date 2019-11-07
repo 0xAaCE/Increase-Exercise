@@ -1,10 +1,7 @@
-const { get } = require('axios');
-const schedule = require('node-schedule');
-
 const { logger } = require('./logger');
 const { formatter, generateObjects } = require('./helpers/data');
 const { obtainRawData, sendTransactions, sendPayment } = require('./helpers/conection');
-const { asyncForEach } = require('./helpers/utils');
+const { asyncForEach, minutesToMs } = require('./helpers/utils');
 
 const loop = async () => {
   while (true) {
@@ -27,4 +24,6 @@ const loop = async () => {
   }
 };
 
-const action = schedule.scheduleJob('*/10 * * * *', loop);
+logger.info('Start Bot');
+const action = setInterval(loop, minutesToMs(10));
+loop();
