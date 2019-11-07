@@ -5,3 +5,5 @@ exports.asyncForEach = async (array, callback) => {
 };
 
 exports.waitFor = ms => new Promise(r => setTimeout(r, ms));
+
+exports.minutesToMs = min => min * 60000;
